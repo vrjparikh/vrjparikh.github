@@ -18,8 +18,6 @@ $(function () {
         'in-kl',
         'in-ga',
         'in-2984',
-        'in-hr',
-        'in-tn',
         'in-ap',
         'in-ka',
         'in-mh',
