@@ -6,8 +6,7 @@ $(function () {
         'bt',  //bhutan
         'sg',  // Singapore
         'vn',  // vietnam
-        'id',   // Indonesia
-		
+        'id'  // Indonesia
     ]
 
     const visited_states_in_india = [
