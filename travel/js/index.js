@@ -3,7 +3,15 @@ $(function () {
 
     const visited_countries = [
         'in',  // India
+        'np',  // Nepal
+        'th',  // Thailand
         'sg',  // Singapore
+        'my',  // Malaysia
+        'ch',  // Switzerland
+        'de',  // Germany
+        'fr',  // France
+        'au',   // Australia
+		
     ]
 
     const visited_states_in_india = [
@@ -27,6 +35,22 @@ $(function () {
         'in-ch',
         'in-br'
     ]
+
+    const visited_states_in_us = [
+        'us-ma',
+        'us-ca',
+        'us-wa',
+        'us-or',
+        'us-wi',
+        'us-nv',
+        'us-sc',
+        'us-ny',
+        'us-nj',
+        'us-fl',
+        'us-ga',
+        'us-az'
+    ];
+
     function getDrilldown(data, visited) {
         $.each(data, function(i) {
             this.value = visited.indexOf(this.properties[property]);
