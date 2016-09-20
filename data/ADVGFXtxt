@@ -1,0 +1,222 @@
+#include<stdio.h>
+#include<string.h>
+char cipher[] = "ADFGVX";
+char polybius[6][6]; //POLYBIUS MATRIX
+                     //Assume that both the keys have less than 20 characters
+char first[20];      //FIRST KEY
+char first1[20];     //INPUT ARRAY 1
+char second1[20];    //INPUT ARRAY 2
+char second[20];     //SECOND KEY
+                     //Assuming message is smaller than 940 characters
+char message[940];   //INITIAL MESSAGE
+char head[940][3];   //HEADER
+char final[100][20]; //FINAL CIPHER TABLE
+char lamb[1980];     //PLACEHOLDER ARRAY
+char aux[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+char aux1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+int meslength;       //MESSAGE LENGTH OF ENCODED MESSAGE
+void prePreProcess()
+{
+	int i,j;
+	for (i =0; i<100; i++)
+	{
+		for (j =0; j<20; j++)
+		{
+			final[i][j] = " ";
+		}
+	}	
+}
+void preProcess()    //PREPROCESSING THE SECOND KEY 
+{
+	int i,j;
+	int l = strlen(second1);
+	for (i =0; i<l; i++)
+	{
+		if(second1[i]!=' '&&second[i+1]==' ')
+		{
+			break;
+		}
+	}
+	strncpy(second,second1,i);
+}
+void removeDuplicates() //PREPROCESSING THE FIRST KEY
+{
+	int i,j,k,l;
+	k =0 ;
+	int m = strlen(first1);
+	for(i=0; i<m; i++)
+	{
+		for(j=i+1; j<m; j++)
+		{
+			if(first1[i]==first1[j])
+			{
+				for (l = j; l<m-1; l++)
+				{
+
+					first1[l]=first1[l+1];
+				}
+				k++;
+			}
+		}
+	}
+	strncpy(first,first1,m-k+1);
+}
+void constructPolySquare()  //CONSTRUCTING THE POLYBIUS SQUARE
+{
+	removeDuplicates();
+	int i,j;
+	int lambda = strlen(first);
+	int l = 0;
+	for (i = 0; i<36&&l<lambda; )
+	{
+		if (aux[i] == first[l])
+		{
+			for (j=i; j>=l; j--)
+			{
+					aux[j]=aux[j-1];
+			}
+			aux[l] = first[l];
+			l++;
+			i=0;
+		}
+		else
+		{
+			i++;
+		}
+	}
+	int m =0;
+	for (i =0; i<6; i++)
+	{
+		for(j =0; j<6; j++)
+		{
+			polybius[i][j]=aux[m++];
+		}
+	}
+	printf("POLYBIUS MATRIX IS AS FOLLOWS: \n");
+	for (i =0; i<6; i++)
+	{
+		for(j =0; j<6; j++)
+		{
+			printf(" %c ",polybius[i][j]);
+		}
+		printf("\n");
+	}
+}
+char row(char c) //ENCOODING THE FIRST CIPHER
+{
+	int i,j;
+	for(i =0; i<6; i++)
+	{
+		for (j=0; j<6; j++)
+		{
+			if(polybius[i][j] == c)
+			{
+				return(cipher[i]);
+			}
+		}
+	}
+}
+char collumn(char c)  //ENCODING THE SECOND CIPHER
+{
+	int i,j;
+	for(i =0; i<6; i++)
+	{
+		for (j=0; j<6; j++)
+		{
+			if(polybius[i][j] == c)
+			{
+				return(cipher[j]);
+			}
+		}
+	}
+}	
+void convertCharToHead() //CONVERTING THE FIRST OUTPUT TO THE SECOND FORM
+{
+	int len = strlen(message);
+	int i,j,k;
+	int m =0;
+	lamb[0] = 0;
+	for (i = 0; i<len; i++)
+	{
+		head[i][0] = message[i];
+		head[i][1] = row(message[i]);
+		head[i][2] = collumn(message[i]);
+		lamb[m++] = head[i][1];
+		lamb[m++] = head[i][2];
+	}
+	printf("The Message After first pass is : \n");
+	for (i = 0; i<len; i++)
+	{
+		printf("%c%c ",head[i][1],head[i][2]);
+	}
+	printf("\n");
+	int len2  = strlen(second);
+	int a,h;
+	h = 0;
+	for (i=0; i<len2; i++) //storing the second key
+	{
+		final[0][i] = second[i];
+	}
+	for (i = 1; h<=m ;i++) //completing the second table
+	{
+		for (j = 0; j<len2; j++)
+		{
+			final[i][j]=lamb[h++];
+		}
+	}
+	printf("\n \n \n \n \nTHE SECOND TABLE IS AS FOLLOWS \n");
+	for (a = 0; a<i ;a++) //printing the second table
+	{
+		puts(final[a]);
+	}
+	meslength=i;
+	lamb[0]=0; //flushing the placeholder array
+}
+void columnarTranspose() //FINAL COLUMNAR TRANSPOSE
+{
+	int i,j,k,m;
+	k= 0;
+	lamb[0]=0;
+	int l = strlen(second);
+	for (m =0; k<26; m++,k++)
+	{
+		for (i =0; i<l; i++)
+		{
+			if(aux1[k]==final[0][i])  //Search for the smallest to the largest
+			{
+				for(j = 1; j<meslength; j++)
+				{
+					lamb[j-1]= final[j][i];
+				}
+				printf("%s ",lamb);
+				lamb[0]=0;
+				k++;
+			}
+		}
+	}
+	printf("\n");
+}
+void main()
+{
+	//prePreProcess();
+	printf("Enter the First Key for the Cipher: \n");
+	gets(first1);
+	printf("Enter the Second Key for the Cipher: \n");
+	gets(second1);
+	preProcess();
+	printf("Enter the Message to Encode: \n");
+	gets(message);
+	printf("Press any Key to perform encoding \n");
+	gets(lamb);
+	constructPolySquare();
+	printf("\n\n\n\n\n Press any Key to continue with the encoding \n");
+	gets(lamb);	
+	convertCharToHead();
+	printf("\n\n\n\n\n Press any Key to continue with the encoding \n");
+	gets(lamb);
+	printf("\n\n\n\n\n FINAL ENCODED MESSAGE IS \n");
+	printf("MESLENGTH IS %d \n",meslength);
+	columnarTranspose();
+	printf("\n\n\n\n\n Press any Key to terminate the programme \n");
+	gets(lamb);
+}

@@ -282,7 +282,7 @@
     				<img src="img/flankem.jpg" class="img-responsive" alt="Corridor Following Using SONAR">
     			  </a>
     			  <div class="portfolio-caption">
-    				<h4>Corridor FOllowing Robot using SONAR</h4>
+    				<h4>Corridor Following Robot using SONAR</h4>
     				<p class="text-muted">August 15'</p>
     			  </div>
     			</div>			
@@ -350,7 +350,7 @@
     				<img src="img/acb.jpg" class="img-responsive" alt="Autonomous Campus Bot">
     			  </a>
     			  <div class="portfolio-caption">
-    				<h4Autonomous Campus Rover</h4>
+    				<h4>Autonomous Campus Rover</h4>
     				<p class="text-muted">August 16' - Present</p>
     			  </div>
     			</div>
@@ -683,16 +683,13 @@
 			<div class="col-lg-8 col-lg-offset-2">
 			  <div class="modal-body">
 				<!-- Project Details Go Here -->
-				<h2>Sirius - Wheel Leg Transfigurable Robot</h2>
-				<p class="item-intro text-muted">Inter-Hall Hardware Exhibition, IIT Kharagpur</p>
-				<iframe width="660" height="465" src="https://www.youtube.com/embed/tceGkQNUUpM" frameborder="0" allowfullscreen></iframe><br><br>
-				<p>The project proposed  a wheel-leg hybrid robot system design using 8-bit micro-controllers which can traverse multiple terrains. The complete mechanical deisgn to gait-selection procedure was performed and optimised for low cost embedded devices.</p>
-				<p>I developed and tested the gait-selection module on the basis of the mechanical design and computational power constraints. I also developed the automatic gait selection using SVM techniques which was tested to show proof of concept.</p>
-				<strong>Report</strong>: <i><a href="./data/sirius.pdf">System Design for an Automatic Gait Selecting Low-Cost Wheel-Leg Hybrid Robot</a></i>
+				<h2>Self Balancing Robot</h2>
+				<p class="item-intro text-muted">IEEE Winter Workshop, IIT Kharagpur</p>
+				<p>The project proposed  a two wheeled robot using 8-bit micro-controllers which can balance itslef and then move around. The complete mechanical deisgn for the IMU position was performed and optimised for low cost embedded devices.</p>
+				<p>I developed and tested the PID loop used for provding stabilizing velocity to the wheels. Data source was IMU-6050 and the controlled parameter was the DC motor with a feedback system</p>
+				<strong>Report</strong>: <i><a href="./data/wws.pdf">IEEE Workshop: Self Balancing Robot</a></i>
 				<ul class="list-inline">
-				  <li><a href="https://github.com/RP-Hall">Profile</a></li>
-				  <li>August 14' to April 15'</li>
-				  <li><a href="https://github.com/RP-Hall/sirius">Github</a></li>
+				<li> December 14' </li>
 				</ul>
 				<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 			  </div>
@@ -701,8 +698,6 @@
 		</div>
 	  </div>
 	</div>
-
-
 <!-- Portfolio Modal 7 -->
 <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
@@ -717,15 +712,14 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>Vison Based Pedestrian Tracking for Advanced Driver Assistance System</h2>
-			<p class="item-intro text-muted">Centre for High Performance Embedded Systems <br> Nanyang Technological University, Singapore</p>
-			<center><img class="img-responsive img-centered" src="img/intern.png" alt="Pedestrian Tracking Results"></center>
-			<p>The project aimed to develop a pedestrian tracking system on a moving car for an advanced driver assistance system.</p>
-			<p>I developed a pedestrian tracker using Kalman Filter that improved pedestrian detection using tracking information. I also worked on ego-motion compensation for the same since the camera feed was from a moving vehicle. The modified method increased detection speed using tracking data by reducing the search area for detection.</p>
-			<strong>Report</strong>: <i>Vision Based Pedestrian Tracking for ADAS </i>(<a href="data/intern.pdf">Link</a>)
+			<h2>Corridor Following using SONAR</h2>
+			<p class="item-intro text-muted">Technology Robotix Society <br> IIT Kharagpur, IN</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/zf1VRUQApLE" frameborder="0" allowfullscreen></iframe>
+			<p>The project aimed to develop a low cost robust lane following system to be used in robotics competitions</p>
+			<p>I developed an algorithm for ensuring that the robot always stays in the center of the lane. Also implemented an algorithm to ensure 90 degree turns without the use of IMU or feedback from motor. Controlled speed of motor without using Hall effect encoder, using ultrasound map data.</p>
 			<ul class="list-inline">
-			  <li>Summers 14'</li>
-			  <li><a href="https://github.com/sam17/Padfoot">Github</a></li>
+			  <li>August 15'</li>
+			  <li><a href="https://github.com/thesidjway/Flank-em-proto">Github</a></li>
 			</ul>
 			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
@@ -734,8 +728,6 @@
 	</div>
   </div>
 </div>
-
-
 <!-- Portfolio Modal 8 -->
 <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
@@ -750,16 +742,14 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>Harry Plotter</h2>
-			<p class="item-intro text-muted">Inter-Hall Open Software, IIT KHaragpur</p>
-			<center><img class="img-responsive img-centered" src="img/plotter.png" alt="Harry Plotter UI"></center>
-			<p>The application Harry PLOTter automates the plotting of 2D and 3D graphs which can be used widely in all fields of science. It provides easy and novel methods for graph plotting, possessing powerful features that make it tremendously advantageous for various users in any field.</p>
-			<p>It is a pure python application based on py-qtgraph.</p>
-			<strong>Report</strong>: <i>Software Report of Harry-Plotter </i>(<a href="https://github.com/RP-Hall/harry-plotter/blob/master/manuals/Judges%20Report.pdf">Link</a>)
+			<h2>Elderly People Helper (ELPER)</h2>
+			<p class="item-intro text-muted">IEEE SMB Hackathon, IIT KHaragpur</p>
+			<center><img class="img-responsive img-centered" src="img/elper.jpg" alt="ELPER Team"></center>
+			<p>The project aimed at making a comprehensive and robust step-counting and health monitoring device for the elderly. The device featured a robust step counting algorithm, an emergency detectio system, a fall detection system and an indoor navigation module. This device can be monitored through an Application developed on MIT App Inventor. I was incharge for the indoor navigation mechanism and the android App developemnt..</p>
+			<p>This project won silver medal at the Hackathon, and the indoor navigation was highly commended upon.<i> Also this device has been offered a place i the commercial market by multiple commerical backers</p>i></p>
+			<strong>Report</strong>: <i>ELPER product report </i>(<a href="./data/ELPER.pdf">Link</a>)
 			<ul class="list-inline">
-			  <li><a href="https://github.com/RP-Hall">Web-Link</a></li>
-			  <li>March 15'</li>
-			  <li><a href="https://github.com/RP-Hall/harry-plotter">Github</a></li>
+			  <li>August 15'</li>
 			</ul>
 			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
@@ -768,7 +758,6 @@
 	</div>
   </div>
 </div>
-
 <!-- Portfolio Modal 9 -->
 <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
@@ -783,15 +772,14 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>Pocket-Rocket</h2>
-			<p class="item-intro text-muted">Code.Fun.Do 2013, Microsoft Hackathon</p>
-			<iframe width="660" height="360" src="https://www.youtube.com/embed/9ErTpwNatcw" frameborder="0" allowfullscreen></iframe>
+			<h2>Motion Mimicing Robot</h2>
+			<p class="item-intro text-muted">IEEE Winter Workshop, IIT Kharagpur</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/D3ijP_hWT6A" frameborder="0" allowfullscreen></iframe>
 			<br><br>
-			<p>Pocket-Rocket is a simple multi-player Windows Phone game inspired from the popular web game <a href="http://curvefever.com/">Curve Fever</a>></p>
-			<p>It is a pure HTML5 game developed using <a href="http://www.scirra.com/html5-game-engine">Construct</a> with single player high-score feature and multi-player feature. It can work using touch as well as accelerometer input.</p>
+			<p>This robot was an extension of the ELPER project. The robot traveeleda distance equal or proportional to the distance travelled by the user. I was a mentor at this workshop and alongside making this robot i taught 30 freshmen and sophomores how to do the same</p>
 			<ul class="list-inline">
-			  <li>September 13'</li>
-			  <li><a href="https://github.com/sam17/pocket-rocket">Github</a></li>
+			  <li>December 15'</li>
+			  <li><a href="./data/wws2.pdf">Documentation</a></li>
 			</ul>
 			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
@@ -800,7 +788,6 @@
 	</div>
   </div>
 </div>
-
 <!-- Portfolio Modal 10 -->
 <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
@@ -815,15 +802,14 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>janDarbaar</h2>
-			<p class="item-intro text-muted">Google Cloud Developers' Challenge</p>
-			<iframe width="620" height="365" src="https://www.youtube.com/embed/Xweecrquyfc" frameaborder="0" allowfullscreen></iframe><br><br>
-			<p>janDarbaar is an online social complaint web application that got selected as one of the best in India by Google as part of it's Cloud Developer's Challenge.</p>
-			<p>It was developed completely using Googl's cloud APIs and an Android app for the same was also developed. </p>
+			<h2>Obstacle Avoidance And Control On Autonomous Bicycle</h2>
+			<p class="item-intro text-muted">LBS Hall of Residence, IIT Kharagpur</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/7QqDaeBwnYM" frameborder="0" allowfullscreen></iframe>
+			<p>Created Depth Map using SONAR, in order to locate the obstacles in the way of the bicycle and then wrote an algorithm to avoid the obstacle and then rejoin the original path in order to reach the destination. Did triangulation using SONAR, and then avoided obstacles. Due to hardware restrictions had to switch to a simpler model finally, aided by an onboard camera. Odeometry was performed using hub motor for locomotion.</p>
+			<p>This project won the KPIT Sparkle 2015 </p>
 			<ul class="list-inline">
-			  <li><a href="http://gcdc2013-jan-darbaar.appspot.com/">Web-Link</a></li>
-			  <li>Summers 14'</li>
-			  <li><a href="https://github.com/sam17/janDarbaar">Github</a></li>
+			  <li><a href="./data/kpit.pdf">Documentation</a></li>
+			  <li>January 15' to September 15'</li>
 			</ul>
 			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
@@ -832,7 +818,6 @@
 	</div>
   </div>
 </div>
-
 <!-- Portfolio Modal 11 -->
 <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
@@ -847,15 +832,13 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>Mosaiq - Automated Image Mosaicing of Torn Paper Documents</h2>
-			<p class="item-intro text-muted">Inter-Hall Open Software, IIT Kharagpur</p>
-			<center><img class="img-responsive img-centered" src="img/torn.jpg" alt=""Mosaiq Results></center>
-			<p>Mosaiq is a image mosaicing software which can join torn paper documents together. It is also capable of giving partial reconstruction if complete was unsuccessful. Human input could also be used when reconstruction is not possible.</p>
-			<p>I implemented a globally consistent reconstruction method using a turning function. A set of candidate matches was found by comparing Turning Functions of different torn pieces. From these matches, global consistency is achieved by gradient projection. This was one of the methods implemented to test the performance of the software.
-			</p>
-			<strong>Report</strong>: <i>User Manual of Mosaiq </i>(<a href="data/mosaiq.pdf">Link</a>)
+			<h2>Autonomous Campus Rover</h2>
+			<p class="item-intro text-muted">MakerSpace, IIT Kharagpur</p>
+			<center><img class="img-responsive img-centered" src="img/acb_map.jpg" alt="ACB MAP"></center>
+			<p>This project aims at making a cheap autonomous Campus Rover, like the <a href="http://erlerobotics.com/blog/erle-rover/">erle rover</a>. I will be responsible for manufacturing the chassis and wwriting the control for the speed of the wheels.</p>
+			<strong>Report</strong>: <i>Project Proposal of Autonomous Campus Bot</i>(<a href="data/acb.pdf">Link</a>)
 			<ul class="list-inline">
-			  <li>March 14'</li>
+			  <li>August 16' - Present </li>
 			</ul>
 			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
@@ -864,39 +847,6 @@
 	</div>
   </div>
 </div>
-
-<!-- Portfolio Modal 14 -->
-<div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-	<div class="close-modal" data-dismiss="modal">
-	  <div class="lr">
-		<div class="rl">
-		</div>
-	  </div>
-	</div>
-	<div class="container">
-	  <div class="row">
-		<div class="col-lg-8 col-lg-offset-2">
-		  <div class="modal-body">
-			<!-- Project Details Go Here -->
-			<h2>Erudito - Citation Analyser</h2>
-			<p class="item-intro text-muted">Inter-Hall Open Software</p>
-			<center><img class="img-responsive img-centered" src="img/erudito.png" alt="Erudito UI"></center>
-			<p>Erudito is a citation analyser which allows users to efficiently manage papers and also gave features to make notes and bookmark authors and/or journals..</p>
-			<p>As part of this software, I implemented teh back-end parser which would search websites like Google Scholar and Academia to get the details of research papers, authors, journals and citations.</p>
-			<strong>Report</strong>: <i>User Manual of Erudito </i>(<a href="data/erudito.pdf">Link</a>)
-
-			<ul class="list-inline">
-			  <li>March 13'</li>
-			</ul>
-			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  </div>
-</div>
-
 <!-- Portfolio Modal 12 -->
 <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
@@ -911,20 +861,24 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>Registration Portal - Robotix</h2>
-			<p class="item-intro text-muted">Technology Robotix Society</p>
-			<p>Robotix 2013 used a Django application based registration portal as the backend software for event management inlcuding team registration, scoring and round management.</p>
-			<ul class="list-inline">
-			  <li>January 13'</li>
-			</ul>
-			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+			<h2>Hobby Robotics Projects</h2>
+			<p class="item-intro text-muted">IIT Kharagpur</p>
+			<center><img class="img-responsive img-centered" src="img/hobbyR.JPG" alt="Step Climbing Bot"</center>
+			<p>Hobby Robotics is one of my favourite past time which played a prime role in nurturing my interest in robotics. I have built multiple small robots for tech-fests in IIT Kharagpur or to teach robotics to students on workshops and at times even just to learn to use some sensor modules.</p>
+			<p>Some of the robots that I have built are:
+			  <ul align="left">
+				<li> Ball Follower - Robot that can follow a ball from on-board camera feed.
+				<li> Stair Climbing Robot - A robot that can climb up and down stairs.
+				<li> Wrist Movement Controlled - Robot cabale of being controlled using wrist movement using accelerometer on the wrist or even using android phone.
+				<li> Person Follower - Equipped with the Microsoft Kinect, the robot could follow a human.
+			  </ul>
+			  <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
 		</div>
 	  </div>
 	</div>
   </div>
 </div>
-
 <!-- Portfolio Modal 13 -->
 <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
@@ -939,14 +893,45 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>Text to Braille Converter</h2>
-			<p class="item-intro text-muted">Inter-Hall Hardware Exhibition</p>
+			<h2>Warehouse</h2>
+			<p class="item-intro text-muted">ROBOTIX 2016</p>
 			<center><img class="img-responsive img-centered" src="img/braille.jpg" alt="Text-Braille Converter Setup"></center>
 
-			<p>Text to Braille Converter was a device which took A4 sheet printed pages over which a CMOS sensor would scroll over to get the image. The image was then converted to a character whose braille was then printed on a platform driven by 30 servo motors. All processing was performed on 8-bit ATMEGA microcontrollers.</p>
-			<p>I designed the OCR module which used naive but fast method so that it can work on 8-bit microcontrollers, testing it initially using openCV and then shifting to AVR. Data transmission of images was also optimised by converting to Bayer for faster communication. </p>
+			<p>Warehouse was the semi autonomous event held at ROBOTIX 2016. I co- conceptualized the event and looked after its execution on the ground.</p>
+			<strong>Report</strong>: <i>Problem Statement </i>(<a href="./data/warehouse.pdf">Link</a>)
+			<p></p>
 			<ul class="list-inline">
-			  <li>March 12'</li>
+			  <li>January 16'</li>
+			</ul>
+			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+<!-- Portfolio Modal 14 -->
+<div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+	<div class="close-modal" data-dismiss="modal">
+	  <div class="lr">
+		<div class="rl">
+		</div>
+	  </div>
+	</div>
+	<div class="container">
+	  <div class="row">
+		<div class="col-lg-8 col-lg-offset-2">
+		  <div class="modal-body">
+			<!-- Project Details Go Here -->
+			<h2>ANti-Virus</h2>
+			<p class="item-intro text-muted">ROBOTIX 2017</p>
+			<center><img class="img-responsive img-centered" src="img/robotix.jpg" alt="Technology Robotix Society Logo"></center>
+			<p>Anti-Virus is the Autonomous Event that is going to be held in ROBOTIX 2017. It involves localization and data decryption problems in its problem statement. I am the chief designer and Head for this event</p>
+			<strong>Report</strong>: <i>Anti-Virus Problem Statement</i>(<a href="data/AntiVirus.pdf">Link</a>)
+
+			<ul class="list-inline">
+			  <li>September 16' - Current</li>
 			</ul>
 			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
@@ -969,19 +954,18 @@
 		<div class="col-lg-8 col-lg-offset-2">
 		  <div class="modal-body">
 			<!-- Project Details Go Here -->
-			<h2>Marauders' Map</h2>
-			<p class="item-intro text-muted">Technology Robotix Society</p>
-			<center><img class="img-responsive img-centered" src="img/prongs.jpg" alt="Marauders Map Evaluator"></center>
-
-			<p>Marauder's Map was an online coding event for Robotix 2013 held during Kshitij 13' at IIT Kharagpur. The event was based on modified version of travelling salesman problem.</p>
-			<p>I designed the problem statement along with automatic evaluator for the event. I also made the test cases and tutorial to help participants solve the problem statement.  </p>
-			<strong>Report</strong>: <i>Problem Statement of Marauders' Map</i>(<a href="data/marauder.pdf">Link</a>)
-
-			<ul class="list-inline">
-			  <li><a href="https://web.archive.org/web/20130116005642/http://robotix.in/events/event/The_Marauders_Map">Web-Link</a></li>
-			  <li>January 13'</li>
-			</ul>
-			<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+			<h2>Hobby Coding Projects</h2>
+			<p class="item-intro text-muted">IIT Kharagpur</p>
+			<center><img class="img-responsive img-centered" src="img/coding1.JPG" alt="Generic Coding Logo"</center>
+			<p>Hobby Coding is my way of cooling off. I am not an avid coder but enjoy coding some twisted staements now and then. They keep me in touch with the optimization methods and a little bit of mathemics. Overall coding is fun</p>
+			<p>Some of my projects are:
+			  <ul align="left">
+				<li> Keyboard Optimizatio Suite - A program to optimize keyboard on toouchscreens, using keystroke dynamics and statistics.(<a href="./data/keyboard.cpp"> Link to Source </a>)
+				<li> ADVGFX Cipher Suite - A program to encode messages using the said cipher.(<a href="./data/ADVGFX.txt"> Link to Source </a>)
+				<li> Chrome Dashboard Using C++. (<a href="">Link to Source</a>)
+				<li> Some Fun Curves and 3D models on C++. (<a href="">Link to Source</a>)
+			  </ul>
+			  <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
 		  </div>
 		</div>
 	  </div>
