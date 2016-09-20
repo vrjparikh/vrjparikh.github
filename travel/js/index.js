@@ -12,10 +12,12 @@ $(function () {
 
     const visited_states_in_india = [
         'in-wb',
-        'in-pb',
+        'in-mp',
+        'in-ka',
+        'in-sk',
+        'in-kl',
         'in-ga',
         'in-2984',
-        'in-jk',
         'in-hr',
         'in-tn',
         'in-ap',
@@ -29,22 +31,12 @@ $(function () {
         'in-ut',
         'in-jh',
         'in-ch',
-        'in-br'
+        'in-mp',
+        'in-ct'
     ]
 
     const visited_states_in_us = [
-        'us-ma',
-        'us-ca',
-        'us-wa',
-        'us-or',
-        'us-wi',
-        'us-nv',
-        'us-sc',
-        'us-ny',
-        'us-nj',
-        'us-fl',
-        'us-ga',
-        'us-az'
+        
     ];
 
     function getDrilldown(data, visited) {
